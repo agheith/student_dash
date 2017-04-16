@@ -1,0 +1,37 @@
+<div class="container">
+
+    <div class="row">
+        <h1>Edit Dojo</h1>
+    <div class="cold-md-4">
+        <form action="/dojos/<%= @dojo.id %>" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token  %>">
+        <input type="hidden" name="_method" value="put">
+
+          <div class="form-group">
+            <label for="branch">Branch</label>
+            <input type="text" class="form-control" id="branch" name="dojo[branch]" value="<%= @dojo.branch %>">
+          </div>
+
+          <div class="form-group">
+            <label for="branch">Street</label>
+            <input type="text" class="form-control" id="street" name="dojo[street]" value="current_value">
+          </div>
+
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" name="dojo[city]" value="<%= @dojo.city %>">
+          </div>
+
+          <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" class="form-control" id="state" name="dojo[state]" value="<%= @dojo.state %>">
+          </div>
+
+          <button type="submit" class="btn btn-Primary">Update</button>
+        </form>
+        <hr>
+        <a href="/dojos">Home</a>  |  <a href="/dojos/:id">Show</a>
+    </div>
+
+
+</div>
