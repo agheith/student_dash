@@ -1,6 +1,6 @@
 == README
 
-### Nested Routes
+ Nested Routes
 
  The application needs to read, create, update and delete students from
 each dojo. Therefore, for any CRUD action for a student, we need to
